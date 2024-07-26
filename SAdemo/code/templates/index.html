@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Analyze</title>
+    <link rel="stylesheet" href="../static/css/index_style.css">
+  </head>
+
+  <body>
+
+    <div id="dropZone" class="drop-zone">
+      <h1 style="font-size: 70px; color: rgba(185, 185, 185, 0.8);">Skin Analysis</h1>
+      <form
+        id="uploadForm"
+        action="/"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <input id="fileInput" type="file" name="file" "font-size: 50px; height: 50px;"/>
+        <input id = "send" type="submit" value="Analyze" "font-size: 70px; height: 50px;"/>
+      </form>
+    </div>
+
+    <div id="3D"></div>
+
+    <script>
+      var alertMessage = "{{ alert_message }}";
+      if (alertMessage) {
+        window.alert(alertMessage);
+      } else {
+        window.alert("Must have only one face in image");
+      }
+    </script>
+
+    <script src = "../static/js/event_index.js"></script>
+    <script src = "../static/js/3D.js" type="module"></script>
+  </body>
+</html>

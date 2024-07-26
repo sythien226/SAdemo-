@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facial Skin Analysis Results</title>
+    <link rel="stylesheet" href="../static/css/result_style.css">
+</head>
+<body>
+    <div class="container">
+        <p style="font-size: 40px; font-weight: bold; color: #0056b3;">Facial Skin Analysis Results</p>
+        <div class="images">
+            <img src="data:image/png;base64,{{ image1 }}" alt="Image 1" id="Pigment">
+            <img src="data:image/png;base64,{{ image2 }}" alt="Image 2" id="Pores">
+            <img src="data:image/png;base64,{{ image3 }}" alt="Image 2" id="Wrikle">
+            <p>Pigmentation Segment</p>
+            <p>Pores Segment</p>
+            <p>Wrinkle Segment</p>
+        </div>
+        <div class="analysis-results">
+            <p style="margin-top: 0; font-size: 40px; font-weight: bold; color: #0056b3;">Result</p>
+            <p id="pigment">Pigmentation: {{ Pigment }}</p>
+            <p id="pores">Pores: {{ Pores }}</p>
+            <p id="forehead">Forehead Wrinkle:{{ foreheadW }}</p>
+            <p id="eyes">Eyes Wrinkle: {{ eyesW }}</p>
+            <p id="smile">Smile Wrinkle: {{ smileW }}</p>
+        </div>
+    </div>
+</body>
+</html>
